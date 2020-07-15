@@ -105,10 +105,12 @@ $ python manage.py runserver
 ```
 
 8. change your git branch and commit, push
+```
 $ git checkout develop
 $ git add YOUR_CODE_FILE
 $ git commit -m "YOUR_COMMIT_MESSAGE"
 $ git push origin develop
+```
 
 9. go to your repository & send pull request
 
