@@ -14,7 +14,7 @@ alcolpedia is a django website to introduce various drinking cultures in Korea
 ## Mock Up Design
 
 - <a href = "https://ovenapp.io/view/jjqI146GVpoS9PIuzhZUiKk1TUTMNlPh#zueVT"> ovenapp.io를 이용한 Mockup design </a>
-- <a hrif = "https://xd.adobe.com/view/77b781f7-9178-4f69-96fe-3b88d1735d95-22e4/"> adobe XD를 이용한 Mockup Design </a>
+- <a href = "https://xd.adobe.com/view/77b781f7-9178-4f69-96fe-3b88d1735d95-22e4"> adobe XD를 이용한 Mockup Design </a>
 
 ## Usage
 
