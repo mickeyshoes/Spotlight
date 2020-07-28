@@ -13,7 +13,6 @@ def detail(req,movie_id):
     total = 0
     total_num =0
     for comment in Comments : 
-        print(len(comment.like.all()))
         total += comment.grade 
         total_num += 1
     total /= total_num
