@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{movie.movieTitle}}</h1>
+    장르:{{movie.movieGenre}}
+    평점 : {{score}}
+    <hr>
+    <form method="POST" action="{% url 'new' movie.id %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="save">
+    </form>
+    {% for comment in Comments %}
+        {{comment.user}}
+        <br>
+        {% if comment.spo_review == False %}
+            {{comment.comment_body}}
+        {% else %}
+            스포입니당
+        {% endif %}
+        <div>좋아요 수 : {{comment.like.all|length}}</div>
+        <div>좋아요 누른 사람 : 
+            {% for name in comment.like.all %}
+            {{name.username}}
+            {% endfor %}
+        </div>
+        <h1>{{comment.like.username}}</h1>
+        {% if user in comment.like.all %}
+            <a href="{%url 'cancel' comment.id%} ">좋아요 취소</a>
+        {% else %}
+            <a href="{%url 'like' comment.id%} ">좋아요</a>
+        {% endif%}
+        <hr>
+    {% endfor %}
+
+</body>
+
+</html>
